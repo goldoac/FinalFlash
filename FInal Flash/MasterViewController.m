@@ -8,25 +8,30 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "ModelFood.h"
 
 @interface MasterViewController ()
-
+@property (strong, nonatomic) ModelFood *modeloComida;
 @property NSMutableArray *objects;
 @end
 
 @implementation MasterViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    //self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    [self.modeloComida conexion];
 }
 
-
+- (ModelFood *)modeloComida {
+    if (!_modeloComida) {
+        _modeloComida = [[ModelFood alloc] initWithURL:@"https://api.myjson.com/bins/z2otb"];
+    }
+    return _modeloComida;
+    
+}
 - (void)viewWillAppear:(BOOL)animated {
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
     [super viewWillAppear:animated];
@@ -38,6 +43,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    NSArray *contador = [self.modeloComida.dictionary allKeys];
+    NSLog(@" VER SIIIIII %lu",(unsigned long)[self.modeloComida.dictionary count]);
+    return [contador count];
+}
+
+-(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSArray *titulos = [self.modeloComida.dictionary allKeys];
+    __block NSString *tituloString;
+    [titulos enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+        if(idx == section) {
+            tituloString = obj;
+            NSLog(@"%lu %@",(unsigned long)idx,tituloString);
+        }
+            }];
+
+    return tituloString;
+
+}
 
 /*- (void)insertNewObject:(id)sender {
     if (!self.objects) {
@@ -65,21 +90,23 @@
 
 #pragma mark - Table View
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
+
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    NSArray *keyNameArray = [self.modeloComida.dictionary allKeys];
+    NSArray *keyNameFoodArray = [self.modeloComida.dictionary objectForKey:[keyNameArray objectAtIndex:section]];
+    NSLog(@"HEY FILASSSS %lu",(unsigned long)[keyNameFoodArray count]);
+    return [keyNameFoodArray count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    NSArray *keysArray = [self.modeloComida.dictionary allKeys];
+    NSArray *keyNameFoodArray = [self.modeloComida.dictionary objectForKey:[keysArray objectAtIndex:indexPath.section]];
+    NSDictionary *dicAux = [keyNameFoodArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [dicAux objectForKey:@"Name"];
     return cell;
 }
 
