@@ -13,11 +13,10 @@
 @interface MasterViewController ()
 @property (strong, nonatomic) ModelFood *modeloComida;
 @property NSMutableArray *objects;
+@property (strong, nonatomic) NSString *cellText;
 @end
 
 @implementation MasterViewController
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -78,10 +77,16 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        
+        
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        NSArray *keysArray = [self.modeloComida.dictionary allKeys];
+//        NSArray *keyNameFoodArray = [self.modeloComida.dictionary objectForKey:[keysArray objectAtIndex:indexPath.section]];
+//        NSDictionary *dicAux = [keyNameFoodArray objectAtIndex:indexPath.row];
+        
+        
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        [controller setDetailItem:self.cellText];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
@@ -89,9 +94,6 @@
 
 
 #pragma mark - Table View
-
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSArray *keyNameArray = [self.modeloComida.dictionary allKeys];
@@ -116,14 +118,11 @@
     return YES;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    self.cellText = selectedCell.textLabel.text;
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
 }
 
 

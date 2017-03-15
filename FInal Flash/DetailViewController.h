@@ -10,8 +10,8 @@
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) NSDate *detailItem;
+@property (strong, nonatomic) NSString *comidaSeleccionada;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
-
+- (void)setDetailItem:(NSString *)newDetailItem;
 @end
 
