@@ -111,11 +111,39 @@
     NSArray *keysArray = [self.modeloComida.dictionary allKeys];
     NSArray *keyNameFoodArray = [self.modeloComida.dictionary objectForKey:[keysArray objectAtIndex:indexPath.section]];
     NSDictionary *dicAux = [keyNameFoodArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [dicAux objectForKey:@"Name"];
+   
+    /*
     [self.modeloComida cargarFoto:indexPath completion:^(UIImage *imagenCargar) {
         cell.imageView.image=  imagenCargar;
         [cell setNeedsLayout];
+    }]; */
+    
+    
+ 
+    //Creo un objeto de tipo URL  pidiendo el string que tiene http://..  al dictAux por medio de la key Logo URL
+    NSURL *url = [NSURL URLWithString:[dicAux objectForKey:@"Logo URL"]];
+    //comienzo a pedir ls imagenes en un hilo aparte, utilizando ese objeto URL.
+    //Las variables enviadas por parametro son las que ya me pone por defecto Xcode.  data, response, error
+    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    //si  el metodo dataTaskWithURL  genera data,  osea,  tuvo exito con la URL, entonces sacamos la imagen.
+        if (data) {
+            //UIImage ya trae un metodo para <<intentar>> obtener imagen de datos generados.
+            UIImage *image = [UIImage imageWithData:data];
+            //si de verdad esos datos eran una imagen.  sino es nil.
+            if (image) {
+                //ya teniendo la imagen, la inserto en la celda llamando al hilo principal.  sino no mostrara nada.
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //las celdas de tabla no tienen image, sino imageViews.
+                    cell.imageView.image = image;
+                    [cell setNeedsLayout];
+                });
+            }
+        }
     }];
+    [task resume];
+    
+    cell.textLabel.text = [dicAux objectForKey:@"Name"];
+    
     return cell;
 }
 
