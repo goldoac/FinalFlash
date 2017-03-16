@@ -49,7 +49,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go to Tab view"/>
                                 <connections>
-                                    <segue destination="D58-Sh-fHp" kind="show" id="y28-gA-XQW"/>
+                                    <segue destination="D58-Sh-fHp" kind="presentation" id="y28-gA-XQW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,15 +82,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Another food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SB-Vx-W80">
-                                <rect key="frame" x="114" y="167" width="147" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Another food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SB-Vx-W80">
+                                <rect key="frame" x="114" y="323" width="147" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2SB-Vx-W80" firstAttribute="centerY" secondItem="dE7-Ia-x9w" secondAttribute="centerY" id="1Lk-fc-sZK"/>
+                            <constraint firstItem="2SB-Vx-W80" firstAttribute="centerX" secondItem="dE7-Ia-x9w" secondAttribute="centerX" id="J8J-2d-DcM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="ROJ-Gr-afJ"/>
                 </viewController>
@@ -118,7 +121,7 @@
         <!--Item 1-->
         <scene sceneID="AQq-Gv-fFb">
             <objects>
-                <viewController id="7S1-Qx-78Y" sceneMemberID="viewController">
+                <viewController id="7S1-Qx-78Y" customClass="DimissTavViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A26-7n-gnZ"/>
                         <viewControllerLayoutGuide type="bottom" id="crn-XK-QSM"/>
@@ -127,9 +130,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u55-eQ-oBd">
-                                <rect key="frame" x="143" y="172" width="89" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u55-eQ-oBd">
+                                <rect key="frame" x="143" y="72" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -141,15 +143,29 @@
                                     <segue destination="fef-W2-XEE" kind="show" id="la4-IS-oL9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxT-7O-zgZ">
+                                <rect key="frame" x="164" y="356.5" width="46" height="30"/>
+                                <state key="normal" title="Dimiss"/>
+                                <connections>
+                                    <action selector="dimiss:" destination="7S1-Qx-78Y" eventType="touchUpInside" id="XbJ-lZ-emJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uxT-7O-zgZ" firstAttribute="top" secondItem="1MM-oK-2ab" secondAttribute="bottom" constant="8" symbolic="YES" id="1lb-Xz-zAQ"/>
                             <constraint firstItem="1MM-oK-2ab" firstAttribute="centerY" secondItem="7WI-Et-6cp" secondAttribute="centerY" id="WAM-NA-m9K"/>
                             <constraint firstItem="1MM-oK-2ab" firstAttribute="centerX" secondItem="7WI-Et-6cp" secondAttribute="centerX" id="f5a-8Z-SMK"/>
+                            <constraint firstItem="u55-eQ-oBd" firstAttribute="centerX" secondItem="7WI-Et-6cp" secondAttribute="centerX" id="m58-Ll-iOf"/>
+                            <constraint firstItem="uxT-7O-zgZ" firstAttribute="centerX" secondItem="1MM-oK-2ab" secondAttribute="centerX" id="ogd-xs-GZZ"/>
+                            <constraint firstItem="u55-eQ-oBd" firstAttribute="top" secondItem="A26-7n-gnZ" secondAttribute="bottom" constant="8" symbolic="YES" id="sU1-U8-RU2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="zyH-kQ-aLv"/>
                     <navigationItem key="navigationItem" id="cSt-F5-5gB"/>
+                    <connections>
+                        <outlet property="dimiss" destination="uxT-7O-zgZ" id="7ke-WG-8uO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbR-tP-gaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,11 +239,11 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

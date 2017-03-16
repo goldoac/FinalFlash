@@ -16,6 +16,7 @@
 		22441BEA1E79934900F30EF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22441BE81E79934900F30EF4 /* LaunchScreen.storyboard */; };
 		22441BF51E79934900F30EF4 /* FInal_FlashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22441BF41E79934900F30EF4 /* FInal_FlashTests.m */; };
 		22441C001E79934900F30EF4 /* FInal_FlashUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22441BFF1E79934900F30EF4 /* FInal_FlashUITests.m */; };
+		2264B75D1E7B0B530063DD28 /* DimissTavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2264B75C1E7B0B530063DD28 /* DimissTavViewController.m */; };
 		D4A34DDA1E79D5DB004AA44D /* ModelFood.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A34DD91E79D5DB004AA44D /* ModelFood.m */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		22441BFB1E79934900F30EF4 /* FInal FlashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FInal FlashUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22441BFF1E79934900F30EF4 /* FInal_FlashUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FInal_FlashUITests.m; sourceTree = "<group>"; };
 		22441C011E79934900F30EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2264B75B1E7B0B530063DD28 /* DimissTavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimissTavViewController.h; sourceTree = "<group>"; };
+		2264B75C1E7B0B530063DD28 /* DimissTavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimissTavViewController.m; sourceTree = "<group>"; };
 		D4A34DD81E79D5DB004AA44D /* ModelFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelFood.h; sourceTree = "<group>"; };
 		D4A34DD91E79D5DB004AA44D /* ModelFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelFood.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +119,8 @@
 				22441BE01E79934900F30EF4 /* DetailViewController.h */,
 				22441BE11E79934900F30EF4 /* DetailViewController.m */,
 				22441BE31E79934900F30EF4 /* Main.storyboard */,
+				2264B75B1E7B0B530063DD28 /* DimissTavViewController.h */,
+				2264B75C1E7B0B530063DD28 /* DimissTavViewController.m */,
 				22441BE61E79934900F30EF4 /* Assets.xcassets */,
 				22441BE81E79934900F30EF4 /* LaunchScreen.storyboard */,
 				22441BEB1E79934900F30EF4 /* Info.plist */,
@@ -286,6 +291,7 @@
 				22441BDC1E79934900F30EF4 /* AppDelegate.m in Sources */,
 				22441BDF1E79934900F30EF4 /* MasterViewController.m in Sources */,
 				22441BD91E79934900F30EF4 /* main.m in Sources */,
+				2264B75D1E7B0B530063DD28 /* DimissTavViewController.m in Sources */,
 				22441BE21E79934900F30EF4 /* DetailViewController.m in Sources */,
 				D4A34DDA1E79D5DB004AA44D /* ModelFood.m in Sources */,
 			);
