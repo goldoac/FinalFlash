@@ -78,12 +78,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         
-        
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        NSArray *keysArray = [self.modeloComida.dictionary allKeys];
-//        NSArray *keyNameFoodArray = [self.modeloComida.dictionary objectForKey:[keysArray objectAtIndex:indexPath.section]];
-//        NSDictionary *dicAux = [keyNameFoodArray objectAtIndex:indexPath.row];
-        
+      
+        //Aqui capturo el indice de la tabla seleccionada
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        //aqui obtengo la celda seleccionada de la tabla y se la asigno a una variable tipo celda
+        //porque me es mas facil usarla asi despues en vez de tener una gran linea de codigo para obtener
+        //lo que necesito
+        UITableViewCell *selectedCell = [self.tableView cellForRowAtIndexPath:indexPath];
+        //a celltext que es de tipo NSString le doy el texto de la celda seleccionada.
+        self.cellText = selectedCell.textLabel.text;
         
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         [controller setDetailItem:self.cellText];
@@ -118,12 +121,6 @@
     return YES;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
-    self.cellText = selectedCell.textLabel.text;
-
-}
 
 
 @end
