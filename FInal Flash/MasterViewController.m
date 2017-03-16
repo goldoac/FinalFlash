@@ -112,6 +112,10 @@
     NSArray *keyNameFoodArray = [self.modeloComida.dictionary objectForKey:[keysArray objectAtIndex:indexPath.section]];
     NSDictionary *dicAux = [keyNameFoodArray objectAtIndex:indexPath.row];
     cell.textLabel.text = [dicAux objectForKey:@"Name"];
+    [self.modeloComida cargarFoto:indexPath completion:^(UIImage *imagenCargar) {
+        cell.imageView.image=  imagenCargar;
+        [cell setNeedsLayout];
+    }];
     return cell;
 }
 

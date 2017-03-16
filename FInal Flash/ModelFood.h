@@ -14,5 +14,6 @@
 -(instancetype) initWithURL: (NSString*) aStringURL;
 -(void)conexion;
 -(NSDictionary *) dictionary;
+-(void)cargarFoto: (NSIndexPath *) pathImage completion:(void (^)(UIImage *imagenCargar))completionBlock;
 
 @end
