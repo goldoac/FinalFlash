@@ -32,7 +32,7 @@
 }
 
 
--(void)conexion{
+-(void)conexion :(void (^)(NSDictionary *dictionary))completionBlock {
     
     NSURL *url = [NSURL URLWithString:self.stringURL];
     
@@ -49,6 +49,13 @@
                                                                                             options:0
                                                                                               error:&JSONError];
                                           if ([objeto isKindOfClass:[NSDictionary class]]) {
+                                              dispatch_async(dispatch_get_main_queue(), ^{
+                                                  self.dictionary = objeto;
+                                                  //   NSLog(@"Response: %@", self.dictionary);
+                                                  if (completionBlock) {
+                                                      completionBlock(self.dictionary);
+                                                  }
+                                              });
                                               self.dictionary = objeto;
                                               NSLog(@"aqui esta %@", self.dictionary);
                                           }

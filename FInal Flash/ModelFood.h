@@ -12,7 +12,7 @@
 @interface ModelFood : NSObject
 
 -(instancetype) initWithURL: (NSString*) aStringURL;
--(void)conexion;
+-(void)conexion : (void (^)(NSDictionary *dictionary))completionBlock ;
 -(NSDictionary *) dictionary;
 -(void)cargarFoto: (NSIndexPath *) pathImage completion:(void (^)(UIImage *imagenCargar))completionBlock;
 
