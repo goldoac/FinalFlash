@@ -59,8 +59,9 @@
         className = NSStringFromClass([object2 class]);
         st2 = [[object2 viewControllers] lastObject];
         NSLog(@"second tab Is of type: %@", className);
-
-       st2.tabString = @"I got the second label";
+        st2.tabString = @"I got the second label";
+        //ESCONDO EL TOP NAVIGATION BAR
+      //  [self.navigationController setNavigationBarHidden:YES animated:YES];
     }
 }
 

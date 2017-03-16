@@ -50,7 +50,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Tab View"/>
                                 <connections>
-                                    <segue destination="D58-Sh-fHp" kind="presentation" identifier="showTabs" id="y28-gA-XQW"/>
+                                    <segue destination="D58-Sh-fHp" kind="show" identifier="showTabs" id="y28-gA-XQW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -171,12 +171,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dimiss" destination="uxT-7O-zgZ" id="7ke-WG-8uO"/>
+                        <outlet property="dimissTab" destination="zyH-kQ-aLv" id="Tc1-7U-oTn"/>
                         <outlet property="tabLabel" destination="u55-eQ-oBd" id="gLK-lR-LDu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbR-tP-gaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4023" y="-630"/>
+            <point key="canvasLocation" x="3610" y="-630"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h2m-zE-5KG">

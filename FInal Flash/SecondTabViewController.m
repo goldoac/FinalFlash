@@ -8,7 +8,7 @@
 
 #import "SecondTabViewController.h"
 
-@interface SecondTabViewController ()
+@interface SecondTabViewController ()<UITabBarControllerDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *tabLabel;
 
 @end
@@ -19,21 +19,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tabLabel.text = self.tabString;
+     self.tabBarController.delegate = self;
+   
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(void) viewWillAppear:(BOOL)animated {
+     [self.tabBarController.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    NSUInteger indexOfTab = [tabBarController.viewControllers indexOfObject:viewController];
+    NSLog(@"Tab index = %lu ", (unsigned long)indexOfTab);
+       [self.tabBarController.navigationController setNavigationBarHidden:NO animated:YES];
+    
 }
-*/
 
 @end

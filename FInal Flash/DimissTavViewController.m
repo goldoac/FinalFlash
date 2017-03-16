@@ -8,8 +8,9 @@
 
 #import "DimissTavViewController.h"
 
-@interface DimissTavViewController ()
+@interface DimissTavViewController ()<UITabBarControllerDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *tabLabel;
+@property (strong, nonatomic) IBOutlet UITabBarItem *dimissTab;
 
 @end
 
@@ -19,6 +20,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tabLabel.text = self.tabString;
+    self.tabBarController.delegate = self;
+   
+    
+    
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    
+     [self.navigationController.tabBarController.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +47,13 @@
 */
 - (IBAction)dimiss:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    NSUInteger indexOfTab = [tabBarController.viewControllers indexOfObject:viewController];
+    NSLog(@"Tab index = %lu ", (unsigned long)indexOfTab);
+
+
 }
 
 @end
