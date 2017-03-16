@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-
+#import "SecondTabViewController.h"
 @interface DetailViewController ()
 
 @end
@@ -47,7 +47,21 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    if([segue.identifier isEqualToString:@"showTabs"]) {
+        id object= [segue destinationViewController];
+        NSString *className = NSStringFromClass([object class]);
+        NSLog(@"Is of type: %@", className);
+        SecondTabViewController *st;
+        st =  [[object viewControllers] objectAtIndex:0];
+        st.tabString = @"I got the label";
+        SecondTabViewController *st2;
+        id object2 = [[object viewControllers] objectAtIndex:1];
+        className = NSStringFromClass([object2 class]);
+        st2 = [[object2 viewControllers] lastObject];
+        NSLog(@"second tab Is of type: %@", className);
+
+       st2.tabString = @"I got the second label";
+    }
 }
 
 

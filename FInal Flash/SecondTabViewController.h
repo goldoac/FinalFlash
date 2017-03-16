@@ -1,5 +1,5 @@
 //
-//  DimissTavViewController.h
+//  SecondTabViewController.h
 //  FInal Flash
 //
 //  Created by applaudito on 3/16/17.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DimissTavViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIButton *dimiss;
+@interface SecondTabViewController : UIViewController
 @property (strong,nonatomic) NSString * tabString;
 @end

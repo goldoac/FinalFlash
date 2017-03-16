@@ -38,18 +38,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="325" width="335" height="17"/>
+                                <rect key="frame" x="20" y="323.5" width="335" height="20.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGK-9D-eSS">
-                                <rect key="frame" x="125" y="135" width="102" height="9"/>
+                                <rect key="frame" x="125" y="122" width="102" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go to Tab view"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Tab View"/>
                                 <connections>
-                                    <segue destination="D58-Sh-fHp" kind="presentation" id="y28-gA-XQW"/>
+                                    <segue destination="D58-Sh-fHp" kind="presentation" identifier="showTabs" id="y28-gA-XQW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,12 +69,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="474.51274362818594"/>
+            <point key="canvasLocation" x="1009" y="516"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="ady-Ye-RHS">
             <objects>
-                <viewController id="UZL-VD-m47" sceneMemberID="viewController">
+                <viewController id="UZL-VD-m47" customClass="SecondTabViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CfH-V7-LwH"/>
                         <viewControllerLayoutGuide type="bottom" id="r29-uT-c03"/>
@@ -83,8 +84,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Another food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SB-Vx-W80">
-                                <rect key="frame" x="114" y="323" width="147" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="102" y="321.5" width="172" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -96,10 +97,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="ROJ-Gr-afJ"/>
+                    <connections>
+                        <outlet property="tabLabel" destination="2SB-Vx-W80" id="27Z-Ez-h04"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQM-lw-YBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2896.8000000000002" y="57.121439280359823"/>
+            <point key="canvasLocation" x="2756" y="109"/>
         </scene>
         <!--Item-->
         <scene sceneID="jvi-Xo-3SM">
@@ -143,33 +147,36 @@
                                     <segue destination="fef-W2-XEE" kind="show" id="la4-IS-oL9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxT-7O-zgZ">
-                                <rect key="frame" x="164" y="356.5" width="46" height="30"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1MM-oK-2ab" firstAttribute="centerY" secondItem="7WI-Et-6cp" secondAttribute="centerY" id="WAM-NA-m9K"/>
+                            <constraint firstItem="1MM-oK-2ab" firstAttribute="centerX" secondItem="7WI-Et-6cp" secondAttribute="centerX" id="f5a-8Z-SMK"/>
+                            <constraint firstItem="u55-eQ-oBd" firstAttribute="centerX" secondItem="7WI-Et-6cp" secondAttribute="centerX" id="m58-Ll-iOf"/>
+                            <constraint firstItem="u55-eQ-oBd" firstAttribute="top" secondItem="A26-7n-gnZ" secondAttribute="bottom" constant="8" symbolic="YES" id="sU1-U8-RU2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="zyH-kQ-aLv"/>
+                    <navigationItem key="navigationItem" id="cSt-F5-5gB">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="7nY-Yk-0U6">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uxT-7O-zgZ">
+                                <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Dimiss"/>
                                 <connections>
                                     <action selector="dimiss:" destination="7S1-Qx-78Y" eventType="touchUpInside" id="XbJ-lZ-emJ"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="uxT-7O-zgZ" firstAttribute="top" secondItem="1MM-oK-2ab" secondAttribute="bottom" constant="8" symbolic="YES" id="1lb-Xz-zAQ"/>
-                            <constraint firstItem="1MM-oK-2ab" firstAttribute="centerY" secondItem="7WI-Et-6cp" secondAttribute="centerY" id="WAM-NA-m9K"/>
-                            <constraint firstItem="1MM-oK-2ab" firstAttribute="centerX" secondItem="7WI-Et-6cp" secondAttribute="centerX" id="f5a-8Z-SMK"/>
-                            <constraint firstItem="u55-eQ-oBd" firstAttribute="centerX" secondItem="7WI-Et-6cp" secondAttribute="centerX" id="m58-Ll-iOf"/>
-                            <constraint firstItem="uxT-7O-zgZ" firstAttribute="centerX" secondItem="1MM-oK-2ab" secondAttribute="centerX" id="ogd-xs-GZZ"/>
-                            <constraint firstItem="u55-eQ-oBd" firstAttribute="top" secondItem="A26-7n-gnZ" secondAttribute="bottom" constant="8" symbolic="YES" id="sU1-U8-RU2"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="zyH-kQ-aLv"/>
-                    <navigationItem key="navigationItem" id="cSt-F5-5gB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dimiss" destination="uxT-7O-zgZ" id="7ke-WG-8uO"/>
+                        <outlet property="tabLabel" destination="u55-eQ-oBd" id="gLK-lR-LDu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbR-tP-gaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3495" y="-1160"/>
+            <point key="canvasLocation" x="4023" y="-630"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h2m-zE-5KG">
@@ -187,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkF-Zm-jFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4335" y="-564"/>
+            <point key="canvasLocation" x="5156" y="-630"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="u5X-nB-8Hy">

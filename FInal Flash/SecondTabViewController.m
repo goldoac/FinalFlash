@@ -1,19 +1,19 @@
 //
-//  DimissTavViewController.m
+//  SecondTabViewController.m
 //  FInal Flash
 //
 //  Created by applaudito on 3/16/17.
 //  Copyright © 2017 applaudito. All rights reserved.
 //
 
-#import "DimissTavViewController.h"
+#import "SecondTabViewController.h"
 
-@interface DimissTavViewController ()
+@interface SecondTabViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *tabLabel;
 
 @end
 
-@implementation DimissTavViewController
+@implementation SecondTabViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,8 +35,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)dimiss:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 @end
