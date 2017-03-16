@@ -118,6 +118,7 @@
         [cell setNeedsLayout];
     }]; */
     
+    cell.imageView.image = nil;
     
  
     //Creo un objeto de tipo URL  pidiendo el string que tiene http://..  al dictAux por medio de la key Logo URL
@@ -135,6 +136,7 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     //las celdas de tabla no tienen image, sino imageViews.
                     cell.imageView.image = image;
+                    //Esto obliga a la celda a redibujar todo en la tabla.   pues hay cosas pendientes de mostrar.
                     [cell setNeedsLayout];
                 });
             }
