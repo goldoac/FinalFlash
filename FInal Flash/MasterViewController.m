@@ -21,12 +21,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-    [self.modeloComida conexion];
+    [self.modeloComida conexion:^(NSDictionary *dictionary) {
+        
+        [self.tableView reloadData];
+    }];
+
 }
 
 - (ModelFood *)modeloComida {
     if (!_modeloComida) {
         _modeloComida = [[ModelFood alloc] initWithURL:@"https://api.myjson.com/bins/z2otb"];
+        
+        
+        
     }
     return _modeloComida;
     
@@ -148,6 +155,8 @@
     
     return cell;
 }
+
+
 
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
