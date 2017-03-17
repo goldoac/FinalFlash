@@ -20,7 +20,9 @@
 		2264B7601E7B0E1E0063DD28 /* SecondTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2264B75F1E7B0E1E0063DD28 /* SecondTabViewController.m */; };
 		3130BF271E7C46A0009A7380 /* AFFNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3130BF261E7C46A0009A7380 /* AFFNavigation.m */; };
 		3130BF2A1E7C4DEE009A7380 /* AFFMainSplitViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3130BF291E7C4DEE009A7380 /* AFFMainSplitViewControllerDelegate.m */; };
-		D4A34DDA1E79D5DB004AA44D /* ModelFood.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A34DD91E79D5DB004AA44D /* ModelFood.m */; };
+		3130BF2F1E7C7D1F009A7380 /* AFFMasterTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3130BF2E1E7C7D1F009A7380 /* AFFMasterTableViewDataSource.m */; };
+		3130BF341E7C87EF009A7380 /* AFFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3130BF331E7C87EF009A7380 /* AFFImage.m */; };
+		D4A34DDA1E79D5DB004AA44D /* AFFRestaurantAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A34DD91E79D5DB004AA44D /* AFFRestaurantAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +69,12 @@
 		3130BF261E7C46A0009A7380 /* AFFNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFNavigation.m; sourceTree = "<group>"; };
 		3130BF281E7C4DEE009A7380 /* AFFMainSplitViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFMainSplitViewControllerDelegate.h; sourceTree = "<group>"; };
 		3130BF291E7C4DEE009A7380 /* AFFMainSplitViewControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFMainSplitViewControllerDelegate.m; sourceTree = "<group>"; };
-		D4A34DD81E79D5DB004AA44D /* ModelFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelFood.h; sourceTree = "<group>"; };
-		D4A34DD91E79D5DB004AA44D /* ModelFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelFood.m; sourceTree = "<group>"; };
+		3130BF2D1E7C7D1F009A7380 /* AFFMasterTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFMasterTableViewDataSource.h; sourceTree = "<group>"; };
+		3130BF2E1E7C7D1F009A7380 /* AFFMasterTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFMasterTableViewDataSource.m; sourceTree = "<group>"; };
+		3130BF321E7C87EF009A7380 /* AFFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFImage.h; sourceTree = "<group>"; };
+		3130BF331E7C87EF009A7380 /* AFFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFImage.m; sourceTree = "<group>"; };
+		D4A34DD81E79D5DB004AA44D /* AFFRestaurantAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFRestaurantAPI.h; sourceTree = "<group>"; };
+		D4A34DD91E79D5DB004AA44D /* AFFRestaurantAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFRestaurantAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		22441BD61E79934900F30EF4 /* FInal Flash */ = {
 			isa = PBXGroup;
 			children = (
+				3130BF301E7C8775009A7380 /* Utils */,
 				3130BF231E7C42D0009A7380 /* Model */,
 				3130BF241E7C45ED009A7380 /* Navigation */,
 				22441BD71E79934900F30EF4 /* Supporting Files */,
@@ -162,12 +169,10 @@
 		3130BF221E7C42BA009A7380 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				22441BE01E79934900F30EF4 /* DetailViewController.h */,
-				22441BE11E79934900F30EF4 /* DetailViewController.m */,
+				3130BF2C1E7C7CA4009A7380 /* Detail */,
+				3130BF2B1E7C7C8B009A7380 /* Master */,
 				2264B75B1E7B0B530063DD28 /* DimissTavViewController.h */,
 				2264B75C1E7B0B530063DD28 /* DimissTavViewController.m */,
-				22441BDD1E79934900F30EF4 /* MasterViewController.h */,
-				22441BDE1E79934900F30EF4 /* MasterViewController.m */,
 				2264B75E1E7B0E1E0063DD28 /* SecondTabViewController.h */,
 				2264B75F1E7B0E1E0063DD28 /* SecondTabViewController.m */,
 			);
@@ -177,8 +182,8 @@
 		3130BF231E7C42D0009A7380 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D4A34DD81E79D5DB004AA44D /* ModelFood.h */,
-				D4A34DD91E79D5DB004AA44D /* ModelFood.m */,
+				D4A34DD81E79D5DB004AA44D /* AFFRestaurantAPI.h */,
+				D4A34DD91E79D5DB004AA44D /* AFFRestaurantAPI.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +197,43 @@
 				3130BF291E7C4DEE009A7380 /* AFFMainSplitViewControllerDelegate.m */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		3130BF2B1E7C7C8B009A7380 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				22441BDD1E79934900F30EF4 /* MasterViewController.h */,
+				22441BDE1E79934900F30EF4 /* MasterViewController.m */,
+				3130BF2D1E7C7D1F009A7380 /* AFFMasterTableViewDataSource.h */,
+				3130BF2E1E7C7D1F009A7380 /* AFFMasterTableViewDataSource.m */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
+		3130BF2C1E7C7CA4009A7380 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				22441BE01E79934900F30EF4 /* DetailViewController.h */,
+				22441BE11E79934900F30EF4 /* DetailViewController.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		3130BF301E7C8775009A7380 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3130BF311E7C8790009A7380 /* Image */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3130BF311E7C8790009A7380 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				3130BF321E7C87EF009A7380 /* AFFImage.h */,
+				3130BF331E7C87EF009A7380 /* AFFImage.m */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,12 +372,14 @@
 			files = (
 				22441BDC1E79934900F30EF4 /* AppDelegate.m in Sources */,
 				2264B7601E7B0E1E0063DD28 /* SecondTabViewController.m in Sources */,
+				3130BF2F1E7C7D1F009A7380 /* AFFMasterTableViewDataSource.m in Sources */,
 				22441BDF1E79934900F30EF4 /* MasterViewController.m in Sources */,
+				3130BF341E7C87EF009A7380 /* AFFImage.m in Sources */,
 				3130BF2A1E7C4DEE009A7380 /* AFFMainSplitViewControllerDelegate.m in Sources */,
 				22441BD91E79934900F30EF4 /* main.m in Sources */,
 				2264B75D1E7B0B530063DD28 /* DimissTavViewController.m in Sources */,
 				22441BE21E79934900F30EF4 /* DetailViewController.m in Sources */,
-				D4A34DDA1E79D5DB004AA44D /* ModelFood.m in Sources */,
+				D4A34DDA1E79D5DB004AA44D /* AFFRestaurantAPI.m in Sources */,
 				3130BF271E7C46A0009A7380 /* AFFNavigation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

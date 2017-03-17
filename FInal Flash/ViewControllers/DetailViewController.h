@@ -11,7 +11,7 @@
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) NSString *selectedRestaurant;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
-- (void)setDetailItem:(NSString *)newDetailItem;
-@end
 
+- (void)setDetailItem:(NSString *)newDetailItem;
+
+@end

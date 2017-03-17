@@ -65,7 +65,4 @@
     splitViewController.delegate = self.mainSplitViewControllerDelegate;
 }
 
-
-
-
 @end
