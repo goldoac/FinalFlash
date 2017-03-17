@@ -12,5 +12,8 @@
 
 + (instancetype)sharedInstance;
 - (void)setUpNavigationWithWindow:(UIWindow *)window;
+NSLog(@"nose que poner");
+
+
 
 @end
