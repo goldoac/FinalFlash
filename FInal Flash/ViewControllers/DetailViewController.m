@@ -16,8 +16,8 @@
 
 - (void)configureView {
     // Update the user interface for the detail item.
-    if (self.comidaSeleccionada) {
-        self.detailDescriptionLabel.text = self.comidaSeleccionada;
+    if (self.selectedRestaurant) {
+        self.detailDescriptionLabel.text = self.selectedRestaurant;
     }
 }
 
@@ -38,8 +38,8 @@
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(NSString *)newDetailItem {
-    if (![_comidaSeleccionada isEqualToString:newDetailItem]) {
-        _comidaSeleccionada = newDetailItem;
+    if (![_selectedRestaurant isEqualToString:newDetailItem]) {
+        _selectedRestaurant = newDetailItem;
         
         // Update the view.
         [self configureView];

@@ -6,8 +6,8 @@
 //  Copyright © 2017 applaudito. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import UIKit;
 
-@interface AFFMainSplitViewControllerDelegate : NSObject
+@interface AFFMainSplitViewControllerDelegate : NSObject  <UISplitViewControllerDelegate>
 
 @end
