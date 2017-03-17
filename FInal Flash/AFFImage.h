@@ -1,5 +1,5 @@
 //
-//  AFFMainSplitViewControllerDelegate.h
+//  AFFImage.h
 //  FInal Flash
 //
 //  Created by Juan Garcia on 3/17/17.
@@ -8,6 +8,7 @@
 
 @import UIKit;
 
-@interface AFFMainSplitViewControllerDelegate : NSObject  <UISplitViewControllerDelegate>
+@interface AFFImage : NSObject
+- (void)imageFromURL:(NSURL *)url completion:(void (^)(UIImage *image))completion;
 
 @end
