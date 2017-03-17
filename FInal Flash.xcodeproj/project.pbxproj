@@ -113,23 +113,14 @@
 		22441BD61E79934900F30EF4 /* FInal Flash */ = {
 			isa = PBXGroup;
 			children = (
+				3130BF231E7C42D0009A7380 /* Model */,
+				22441BD71E79934900F30EF4 /* Supporting Files */,
+				3130BF221E7C42BA009A7380 /* ViewControllers */,
 				22441BDA1E79934900F30EF4 /* AppDelegate.h */,
 				22441BDB1E79934900F30EF4 /* AppDelegate.m */,
-				22441BDD1E79934900F30EF4 /* MasterViewController.h */,
-				22441BDE1E79934900F30EF4 /* MasterViewController.m */,
-				D4A34DD81E79D5DB004AA44D /* ModelFood.h */,
-				D4A34DD91E79D5DB004AA44D /* ModelFood.m */,
-				22441BE01E79934900F30EF4 /* DetailViewController.h */,
-				22441BE11E79934900F30EF4 /* DetailViewController.m */,
-				22441BE31E79934900F30EF4 /* Main.storyboard */,
-				2264B75E1E7B0E1E0063DD28 /* SecondTabViewController.h */,
-				2264B75F1E7B0E1E0063DD28 /* SecondTabViewController.m */,
-				2264B75B1E7B0B530063DD28 /* DimissTavViewController.h */,
-				2264B75C1E7B0B530063DD28 /* DimissTavViewController.m */,
 				22441BE61E79934900F30EF4 /* Assets.xcassets */,
 				22441BE81E79934900F30EF4 /* LaunchScreen.storyboard */,
-				22441BEB1E79934900F30EF4 /* Info.plist */,
-				22441BD71E79934900F30EF4 /* Supporting Files */,
+				22441BE31E79934900F30EF4 /* Main.storyboard */,
 			);
 			path = "FInal Flash";
 			sourceTree = "<group>";
@@ -137,9 +128,11 @@
 		22441BD71E79934900F30EF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22441BEB1E79934900F30EF4 /* Info.plist */,
 				22441BD81E79934900F30EF4 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		22441BF31E79934900F30EF4 /* FInal FlashTests */ = {
@@ -158,6 +151,32 @@
 				22441C011E79934900F30EF4 /* Info.plist */,
 			);
 			path = "FInal FlashUITests";
+			sourceTree = "<group>";
+		};
+		3130BF221E7C42BA009A7380 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				22441BE01E79934900F30EF4 /* DetailViewController.h */,
+				22441BE11E79934900F30EF4 /* DetailViewController.m */,
+				2264B75B1E7B0B530063DD28 /* DimissTavViewController.h */,
+				2264B75C1E7B0B530063DD28 /* DimissTavViewController.m */,
+				22441BDD1E79934900F30EF4 /* MasterViewController.h */,
+				22441BDE1E79934900F30EF4 /* MasterViewController.m */,
+				2264B75E1E7B0E1E0063DD28 /* SecondTabViewController.h */,
+				2264B75F1E7B0E1E0063DD28 /* SecondTabViewController.m */,
+			);
+			name = ViewControllers;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3130BF231E7C42D0009A7380 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4A34DD81E79D5DB004AA44D /* ModelFood.h */,
+				D4A34DD91E79D5DB004AA44D /* ModelFood.m */,
+			);
+			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +360,7 @@
 				22441BE41E79934900F30EF4 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		22441BE81E79934900F30EF4 /* LaunchScreen.storyboard */ = {
@@ -349,6 +369,7 @@
 				22441BE91E79934900F30EF4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -448,7 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "FInal Flash/Info.plist";
+				INFOPLIST_FILE = "FInal Flash/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.applaudostudios.oc.FInal-Flash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -459,7 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "FInal Flash/Info.plist";
+				INFOPLIST_FILE = "FInal Flash/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.applaudostudios.oc.FInal-Flash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
