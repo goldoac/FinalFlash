@@ -1,4 +1,4 @@
-//
+//lol
 //  AFFNavigation.h
 //  FInal Flash
 //
@@ -12,7 +12,7 @@
 //Este es mi comentario.  Oscar Castillo
 + (instancetype)sharedInstance;
 - (void)setUpNavigationWithWindow:(UIWindow *)window;
-NSLog(@"nose que poner");
+
 
 
 
