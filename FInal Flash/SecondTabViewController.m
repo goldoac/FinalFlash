@@ -25,7 +25,16 @@
 
 
 -(void) viewWillAppear:(BOOL)animated {
-     [self.tabBarController.navigationController setNavigationBarHidden:NO animated:YES];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    id objectController = window.rootViewController;
+    if([objectController isKindOfClass:[UISplitViewController  class]]) {
+        id object2 = [[objectController viewControllers] lastObject];
+        
+        if([object2 isKindOfClass:[UINavigationController class]]) {
+            [object2 setNavigationBarHidden:NO animated:YES];
+        }
+    }
+    
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {

@@ -28,23 +28,26 @@
 
 -(void) viewWillAppear:(BOOL)animated {
     
-     [self.navigationController.tabBarController.navigationController setNavigationBarHidden:YES animated:YES];
+  
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    id objectController = window.rootViewController;
+    if([objectController isKindOfClass:[UISplitViewController class]]) {
+         id object2 = [[objectController viewControllers] lastObject];
+        
+        if([object2 isKindOfClass:[UINavigationController class]]) {
+            NSLog(@"si es navigation class");
+            [object2 setNavigationBarHidden:YES animated:YES];
+        }
+    }
+   
+   
+   
+  
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (IBAction)dimiss:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
