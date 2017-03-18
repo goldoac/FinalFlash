@@ -19,10 +19,6 @@
 		2264B75D1E7B0B530063DD28 /* DimissTavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2264B75C1E7B0B530063DD28 /* DimissTavViewController.m */; };
 		2264B7601E7B0E1E0063DD28 /* SecondTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2264B75F1E7B0E1E0063DD28 /* SecondTabViewController.m */; };
 		229892C01E7C9D520041C2C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229892BF1E7C9D520041C2C4 /* CoreData.framework */; };
-		229892DD1E7CA2380041C2C4 /* _Laptop.m in Sources */ = {isa = PBXBuildFile; fileRef = 229892D61E7CA2380041C2C4 /* _Laptop.m */; };
-		229892DE1E7CA2380041C2C4 /* _Manufacturer.m in Sources */ = {isa = PBXBuildFile; fileRef = 229892D81E7CA2380041C2C4 /* _Manufacturer.m */; };
-		229892DF1E7CA2380041C2C4 /* Laptop.m in Sources */ = {isa = PBXBuildFile; fileRef = 229892DA1E7CA2380041C2C4 /* Laptop.m */; };
-		229892E01E7CA2380041C2C4 /* Manufacturer.m in Sources */ = {isa = PBXBuildFile; fileRef = 229892DC1E7CA2380041C2C4 /* Manufacturer.m */; };
 		229AFB101E7C9A6A00AEFBA1 /* Laptop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 229AFB0E1E7C9A6A00AEFBA1 /* Laptop.xcdatamodeld */; };
 		3130BF271E7C46A0009A7380 /* AFFNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3130BF261E7C46A0009A7380 /* AFFNavigation.m */; };
 		3130BF2A1E7C4DEE009A7380 /* AFFMainSplitViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3130BF291E7C4DEE009A7380 /* AFFMainSplitViewControllerDelegate.m */; };
@@ -72,14 +68,6 @@
 		2264B75E1E7B0E1E0063DD28 /* SecondTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTabViewController.h; sourceTree = "<group>"; };
 		2264B75F1E7B0E1E0063DD28 /* SecondTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTabViewController.m; sourceTree = "<group>"; };
 		229892BF1E7C9D520041C2C4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		229892D51E7CA2380041C2C4 /* _Laptop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Laptop.h; sourceTree = "<group>"; };
-		229892D61E7CA2380041C2C4 /* _Laptop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Laptop.m; sourceTree = "<group>"; };
-		229892D71E7CA2380041C2C4 /* _Manufacturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Manufacturer.h; sourceTree = "<group>"; };
-		229892D81E7CA2380041C2C4 /* _Manufacturer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Manufacturer.m; sourceTree = "<group>"; };
-		229892D91E7CA2380041C2C4 /* Laptop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Laptop.h; sourceTree = "<group>"; };
-		229892DA1E7CA2380041C2C4 /* Laptop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Laptop.m; sourceTree = "<group>"; };
-		229892DB1E7CA2380041C2C4 /* Manufacturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manufacturer.h; sourceTree = "<group>"; };
-		229892DC1E7CA2380041C2C4 /* Manufacturer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manufacturer.m; sourceTree = "<group>"; };
 		229AFB0F1E7C9A6A00AEFBA1 /* Laptop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Laptop.xcdatamodel; sourceTree = "<group>"; };
 		3130BF251E7C46A0009A7380 /* AFFNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFNavigation.h; sourceTree = "<group>"; };
 		3130BF261E7C46A0009A7380 /* AFFNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFNavigation.m; sourceTree = "<group>"; };
@@ -143,14 +131,6 @@
 		22441BD61E79934900F30EF4 /* FInal Flash */ = {
 			isa = PBXGroup;
 			children = (
-				229892D51E7CA2380041C2C4 /* _Laptop.h */,
-				229892D61E7CA2380041C2C4 /* _Laptop.m */,
-				229892D71E7CA2380041C2C4 /* _Manufacturer.h */,
-				229892D81E7CA2380041C2C4 /* _Manufacturer.m */,
-				229892D91E7CA2380041C2C4 /* Laptop.h */,
-				229892DA1E7CA2380041C2C4 /* Laptop.m */,
-				229892DB1E7CA2380041C2C4 /* Manufacturer.h */,
-				229892DC1E7CA2380041C2C4 /* Manufacturer.m */,
 				3130BF301E7C8775009A7380 /* Utils */,
 				3130BF231E7C42D0009A7380 /* Model */,
 				3130BF241E7C45ED009A7380 /* Navigation */,
@@ -408,19 +388,15 @@
 			files = (
 				22441BDC1E79934900F30EF4 /* AppDelegate.m in Sources */,
 				2264B7601E7B0E1E0063DD28 /* SecondTabViewController.m in Sources */,
-				229892DD1E7CA2380041C2C4 /* _Laptop.m in Sources */,
 				3130BF2F1E7C7D1F009A7380 /* AFFMasterTableViewDataSource.m in Sources */,
 				22441BDF1E79934900F30EF4 /* MasterViewController.m in Sources */,
 				3130BF341E7C87EF009A7380 /* AFFImage.m in Sources */,
-				229892E01E7CA2380041C2C4 /* Manufacturer.m in Sources */,
 				3130BF2A1E7C4DEE009A7380 /* AFFMainSplitViewControllerDelegate.m in Sources */,
 				22441BD91E79934900F30EF4 /* main.m in Sources */,
 				2264B75D1E7B0B530063DD28 /* DimissTavViewController.m in Sources */,
 				22441BE21E79934900F30EF4 /* DetailViewController.m in Sources */,
-				229892DE1E7CA2380041C2C4 /* _Manufacturer.m in Sources */,
 				D4A34DDA1E79D5DB004AA44D /* AFFRestaurantAPI.m in Sources */,
 				3130BF271E7C46A0009A7380 /* AFFNavigation.m in Sources */,
-				229892DF1E7CA2380041C2C4 /* Laptop.m in Sources */,
 				229AFB101E7C9A6A00AEFBA1 /* Laptop.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
